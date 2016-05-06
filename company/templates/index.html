@@ -1,0 +1,55 @@
+
+<html>
+<head>
+		 {% load staticfiles %}
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel = "stylesheet" type = "text/css" href= "static/css/oms.css">
+        <script src="static/js/oms.js"></script>
+</head>
+<body>
+		
+ <div id='user-login'> 
+	<div id='container'>
+			<div id='login-heading' class='login-heading-style'>
+				<div id='head'>
+					<h1 id="heading" class='login-heading-style-1' align="center">OMS</h1>
+				</div>	
+				<div class='subtitle login-heading-subtitle'>
+					<p align='right' class='login-heading-style-2' font-family='Monospace'>Office Management System....</p>
+				</div>
+			</div>
+	</div>
+  	<div id = 'user-input'>
+    	  <div id='container' class='input-elements'>
+				<form id='login-form' name='loginform'>  
+				<div id= 'user' >
+		  			<label for = 'username' class='input-elem text-white'>Username</label>
+    	  			<input type = 'text' id = 'username' name = 'username' class='input-elem'>
+    	 		</div>
+    		    <div id = 'pass'>
+    	 		  	<label for = 'password' class='input-elem text-white'>Password</label>
+    	  			<input type = 'password' id = 'password' name = 'password' class='input-elem'>
+         		</div>
+    	   		<div id="login">
+					<input type = 'submit' id="login-b" class='login-b ' value='Login' />
+				</div>
+			</from>	
+   	 	</div> 
+  	</div>
+</div>
+<div id='login-popup' class='popup login-popup popup-dacoration'>
+		<p id='heading' class='popup-heading'><b>Authenication failed</b></p>
+	<div id='content' class='popup-content'>
+		<br>	
+		 <p id='popup-message' style='margin-left:40px;font-size:18px;'>popup message</p>
+		 <button type="button" id='closePopupbtn' class='popup-btn btn-close' >Close</button>
+	</div>
+</div>
+
+  <div class="popup-layer" id="popup-layer"></div>
+</body>
+<html>

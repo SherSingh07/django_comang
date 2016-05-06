@@ -1,0 +1,82 @@
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		 {% load staticfiles %}
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel = "stylesheet" type = "text/css" href= "static/css/oms.css">
+		<script src="static/js/oms.js"></script>
+</head>
+<body>
+	<div id='container' class='staff'>
+			<div id='staff-heading' class='staff-heading'>
+				<a class='staff-home right-button' href="main">Home</a>	
+				<br>
+				<h3 align='center' style='font-size:40px;margin-top: -21px;'>Carrier Management Services</h3>
+				
+			</div>
+			<div id='staff-sidebar' class='staff-sidebar staff-sidebar-dacoration'>
+				<ul>
+					<li id='director'><a class='staff-menu-button'> Manage Directors</a><br>
+						<ul id='dir_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Registrer director</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Delete director</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Update detail</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>View director list</a><br></li>			
+						</ul>				
+					</li>
+					<li id='employee'><a class='staff-menu-button'>Manage Employees</a>
+						<ul id='emp_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Developer</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Designer</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Tester</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>HR Manager</a><br></li>			
+						</ul>	
+					</li>
+					<li id='other'><a class='staff-menu-button' >Others</a>
+						<ul id='oth_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Peons</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Sweepers</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Security Guards</a><br></li>			
+						</ul>		
+					</li>
+				</ul>			
+			</div>
+			
+		<div id='directors' class='staff-contents dir'>
+				<div>
+		
+				</div>
+				
+			</div>
+		<div id='employees' class='staff-contents emp'>
+				<div>
+		
+				</div>
+				
+			</div>
+		<div id='others' class='staff-contents oth'>
+				<div>
+		
+				</div>
+				
+			</div>	
+		</div>
+</body>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+

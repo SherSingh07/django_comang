@@ -1,0 +1,168 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		 {% load staticfiles %}
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel = "stylesheet" type = "text/css" href= "static/css/oms.css">
+		<script src="static/js/oms.js"></script>
+
+</head>
+<body>
+	
+	<div id='container' class='staff'>
+			<div id='staff-heading' class='staff-heading'>
+				<a class='staff-home right-button' href="main">Home</a>	
+				<br>
+				<h3 align='center' style='font-size:40px;margin-top: -21px; margin-left: 70px;font-family: Comic Sans MS;'>Manage Your Staff Here</h3>
+				
+			</div>
+			<div id='staff-sidebar' class='staff-sidebar staff-sidebar-dacoration'>
+				<ul>
+					<li id='director'><a class='staff-menu-button'> Manage Directors</a><br>
+						<ul id='dir_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Registrer director</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Delete director</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Update detail</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>View director list</a><br></li>			
+						</ul>				
+					</li>
+					<li id='employee'><a class='staff-menu-button'>Manage Employees</a>
+						<ul id='emp_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Developer</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Designer</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Tester</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>HR Manager</a><br></li>			
+						</ul>	
+					</li>
+					<li id='other'><a class='staff-menu-button' >Others</a>
+						<ul id='oth_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Peons</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Sweepers</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Security Guards</a><br></li>			
+						</ul>		
+					</li>					
+				</ul>			
+			</div>
+			
+		<div id='directors' class='staff-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Directors in Company</p>
+				<! table for handling showing director data >		
+			<table class="table-striped table-border" align='center' >
+		    	<thead>
+		    		  <tr class='task-table-header'>
+		    			    <th width=10%>#</th>
+		    			    <th width=20%>Director Name</th>
+		    			    <th width=20%>Date of Joining</th>
+							<th width=10%>Experience/years</th>
+							<th width=20%>Salary</th>
+							<th width=20%>Department Name</th>	
+	      			</tr>
+		    	</thead>
+		    <tbody>
+			
+		
+			{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+		    	<tr>
+					<td >{{ forloop.counter }}</td>
+		    	    <td  style='color:#000000;'><b>John</b></td>
+		    	    <td >10-10-2016</td>
+		    	    <td >1</td>
+					<td >1</td>
+					<td >Development</td>
+		    	  </tr>
+			{% endfor %}
+	
+		    </tbody>
+	  	</table>
+				
+					
+			</div>
+		<div id='employees' class='staff-contents emp'>
+	 		<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Employees</p>
+		
+		 <table class="table-responsive table-border " align='center' >
+		    <thead>
+		      <tr style='color:000000; opacity:9'>
+		        <th width=10%>#</th>
+		        <th width=20%>Name of Employee</th>
+		        <th width=20%>Date of Joining</th>
+				<th width=10%>Experience/years</th>
+				<th width=20%>Salary</th>
+				<th width=20%>Shift of Work</th>	
+	      </tr>
+		    </thead>
+		    <tbody>
+			
+			{% with '10' as dataset %}
+			{% for data in "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" %}
+		    	<tr>
+					<td >{{ forloop.counter }}</td>
+		    	    <td ><b> Clare </b></td>
+		    	    <td >10-10-2016</td>
+		    	    <td >1</td>
+					<td >1</td>
+					<td >1</td>
+		    	  </tr>
+			{% endfor %}
+			{% endwith %}
+		    </tbody>
+	  	</table>
+				
+				
+			</div>
+		<div id='others' class='staff-contents oth'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Other Employees</p>
+			 <table class="table-border" align='center' >
+			    <thead>
+				      <tr>
+					       <th width=10%>Sr.No.</th>
+		       	 		   <th width=20%>Name of Employee</th>
+		        		   <th width=20%>Date of Joining</th>
+						   <th width=10%>Experience/years</th>
+						   <th width=20%>Salary</th>
+						   <th width=20%>Field of Work</th>	
+				      </tr>
+			    </thead>
+		    <tbody>
+			
+			{% with '10' as dataset %}
+			{% for data in "xxxxxxxxxxxxxxxxxxxxxx" %}
+		    	<tr>
+					<td>{{ forloop.counter }}</td>
+		    	    <td>Clark</td>
+		    	    <td>10-10-2016</td>
+		    	    <td>1</td>
+					<td>1</td>
+					<td>1</td>
+		    	  </tr>
+			{% endfor %}
+			{% endwith %}
+		    </tbody>
+	  	</table>
+				
+				
+			</div>	
+		</div>
+
+	<script>
+			
+	</script>
+
+</body>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		 {% load staticfiles %}
+		 {% load extra_tags %}
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel = "stylesheet" type = "text/css" href= "static/css/oms.css">
+	<script src="static/js/oms.js">
+    </script>
+
+</head>
+<body > 
+		<script>
+			window.onload = function(){
+			 setCurUser();
+			};
+		</script>
+		<div id="container">
+			<div class="heading-style">
+				<div class='logo-name'id = "head">
+					<h1 id="heading" align="center">OMS</h1>
+				</div>	
+				<div style='width:1324px;height:46px;font-family: Comic Sans MS;'>
+					<div style='width:1000px;height:40px;float:left;' >	
+					 	<p font-family='Monospace' class='subtitle'>Office Management System....</p>
+					</div >
+					<div style='width:324px;height:40px;float:left;'>
+						<p class='time'><span><b>Time :</b></span><span id='time' style='color:black;'></span></p>
+			
+					 	<p class='user'><span><b>Current User :</b></span><span id='loginuser' style='color:blue;'> </span></p>
+					</div>		
+				</div>	
+			</div>
+		</div>
+		<div id="menu-container">
+			<div class="menu-bar">
+				<div class="menubar-left">
+								<a id = " company" class="menu-button" onclick = alert('company');>OMS</a>	
+								<a class="menu-button" href = "main" >Home</a>	
+								<a class="menu-button" href = "carrier">Carrier</a>
+								<a class="menu-button" href = "aboutus">About us</a>		
+				</div>
+				<div class="menubar-right">
+									<a class="menu-button"  href = "newuser/signup";>Sign Up</a>	
+								    <a id = 'logout' class="menu-button">Logout</a>		
+				</div>
+				<div class="clear"></div>			
+		     </div>
+		</div>
+		
+ 	<div style='width:1338px;height:800px; margin-top: 50px;'>
+		     <div id = "sidebar" class="sidebar-menu sidebar-dacoration">
+				<div id="sidebar-menus">
+					<a id = "staff" class="sidebar-menu-button" href = "staff">Staff</a>	
+     				<a id = "projects" class="sidebar-menu-button" href = "projects">Projects</a>	
+					<a id = "workhour" class="sidebar-menu-button" href = "workHoursManagement">Work hours Management</a>					
+					<a id = "rev_exp" class="sidebar-menu-button" href = "revenueExpenses">Revenue/Expenses</a>	
+					<a id = "searchby" class="sidebar-menu-button" href = "searchby">Serach by</a>	
+					<a id = "attend" class="sidebar-menu-button">Attendence</a>	
+					<a id = "demo" class="sidebar-menu-button">Demo</a>	
+				</div>
+			</div>
+			<div id='tasks' class='task-manager'>
+				<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;'>Manage Your today`s Task using Task Manager</p>
+
+			<! table for handling showing director data >		
+			<table class=' table-border task-table" align='center' >
+		    	<thead>
+		    		 <tr style='color:000000;'>
+	    			    <th width=5%><b>#</b></th>
+	    			    <th width=20%><b>Project Name</b></th>
+	    			    <th width=5%><b>Start Date</b></th>
+						<th width=10%><b>Developer</b></th>
+						<th width=5%><b>Language</b></th>
+						<th width=50%><b>Todays Task</b></th>
+						<th width=10%><b>Developer Mail ID</b></th>
+	     			</tr>
+		    	</thead>
+		    <tbody>
+					
+			{% for data in 'xxxxxxxxxxxxxxxxxx' %}
+		    	<tr class='task-table-contents osm-pointing' style='color:red;'>
+					<td >{{ forloop.counter }}</td>
+		    	    <td ><b>SuperRider(3D game)</b></td>
+		    	    <td >10-10-2016</td>
+		    	    <td >XYZ clark</td>
+					<td >C#</td>
+					<td style='text-align:left;'>Change the graphics of the game. And some other functionalities related to game</td>
+					<td >clark.weavebytes@gmail.com</td>
+		    	  </tr>
+			{% endfor %}
+	
+		    </tbody>
+	  		</table>
+	    </div>
+			<div id='attendence' class='attendence-manager'>
+			<p align='center' class='atte-head' >Manage Employees Attendence</p>
+			<! table for handling showing director data >		
+			<table class=' table-border task-table" align='center' >
+		    	<thead>
+		    		 <tr>
+						 <th style='width:150px;display:block;height:39px;'></th>
+						 <th  style='padding:0 0 0 10;'><b>Day</b></th>
+						{% for day in 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+	    			    	<th  style='padding:0 40 0 40;'><b>{{ forloop.counter }}</b></th>
+	    			    {% endfor %}
+	     			</tr>
+		    	</thead>
+		    <tbody>
+					<tr class='task-table-contents osm-pointing'>
+						<td class='emp-name-heading' style='height:39px;padding:0 0 0 0;'><b>Employee Name</b></td>
+				    	{% for day in 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+				   			<td  class='emp-name-heading'></td>				
+						{% endfor %}					
+					</tr>
+												
+					{% for employee in employees %}
+				   		<tr class='task-table-contents osm-pointing'>			
+							<td ><b>{{ employee.name }}</b></td>	
+							<td ></td>		
+					   	{% for day in 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'%}	
+						{% with 'day'|addstr:forloop.counter as day %}			
+						<td id = '{{employee.name}}-{{ forloop.counter }}' onclick="mark_attendence(this.id);">{{ employee|get_attendence:day }} </td>						{% endwith %}
+						{% endfor %}	
+						</tr>
+					{% endfor %}	
+		    </tbody>
+	  		</table>
+	    </div>
+		<div id='atten-btn-panel' class='atten-btn-panel' >
+			<button type="button" id='atten_save' class='atten-panel-btn' style='margin-left:70px;'>Save Attendence</button>
+			<button type="button" id='atten_cancel' class='atten-panel-btn' style='margin-left:70px;'> Cancel</button>
+		</div>	
+	 </div>
+
+
+
+		<div id='logout-popup' class='popup logout-popup popup-dacoration' style='width:400px;'>
+				<p id='heading' class='popup-heading'><b>Authenication failed</b></p>
+				<div id='content' class='popup-content' style='width:400px;'>
+					<br>	
+		 			<p id='popup-message' style='margin-left:40px;font-size:18px;'>popup message</p>
+					<button type="button" id='logoutPopupOk' class='popup-btn btn-ok' >Ok</button>
+		 			<button type="button" id='logoutPopupCancel' class='popup-btn btn-cancel' >Cancel</button>
+		       	</div>
+       </div>
+
+		<div id='attendence-editor' class='attendence-editor'>
+			<p id='heading' style='text-align:center;font-size:22px;'><b>Attendence Editor</b></p>
+			<div id="a-content" class="a-editor-content">
+				<br>
+				<p style="margin-top:10px;margin-left:10px;font-size:16px;color:blue;">Change Attendence of Employee</p>
+				<p style="margin-top:10px;margin-left:10px;font-size:16px;color:blue;">
+				Name :
+				<span id="name" style="margin-left:40px;">name</span>
+				</p>
+				<p style="margin-top:10px;margin-left:25px;font-size:16px;color:blue;">
+				Day :
+				<span id="day" style="margin-left:40px;">0</span>
+				</p>
+				<select style="width : 130px;margin-left:192px;margin-top: -40" id="att-status" onchange='attendence_selected();'>
+					<option selected="selected" value="-"> Select Attendence </option>
+					<option value="P">Present</option>
+					<option value="A">Apsent</option>
+					<option value="H">Half Day</option>
+					<option value="SL">On Leave</option>
+					<option value="O">Other</option>
+			</select>
+		</div>
+      </div>
+
+		<div id='save-message' class='save-message' >
+			<p id='heading' style='font-size:18px;font-family:Trebuchet MS, Arial, Verdana;margin-left:20px;'><b>Message</b></p>
+			<div id='content' style='width:300px;height:126px;border-top:1px solid black;'>
+				<br>	
+	 			<p id='message' style='margin-left:40px;font-size:16px;'>Attendence save..</p>
+				<button type="button" id='save-ok' class='popup-btn btn-ok' style='margin-left:120px;' >Ok</button>
+	       	</div>
+    	</div>
+
+	<div class="popup-layer" id="popup-layer"></div>
+	<div class="dis-layer" id="dis-layer"></div>
+</body>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,323 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		 {% load staticfiles %}
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel = "stylesheet" type = "text/css" href= "static/css/oms.css">
+		<script src="static/js/oms.js"></script>
+</head>
+<body>
+	<div ng-app="projects_app" ng-controller="projects_controller" ng-init="name='hello'" class='android'>
+		<div id='staff-heading' class='staff-heading'>
+			<a class='staff-home right-button' href="main">Home</a>	
+			<br>
+		    <h3 align='center' style='font-size:40px;margin-top: -21px; margin-left: 70px;font-family: Comic Sans MS;'>Manage Your Projects Here </h3>	
+	  </div>
+	   <div id='staff-sidebar' class='staff-sidebar staff-sidebar-dacoration'>
+				<ul>
+					<li id='android'><a class='staff-menu-button' ng-click="android_projects()"> Android Projects</a><br>
+						<ul id='dir_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' >A</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>B</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>C</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>D</a><br></li>			
+						</ul>				
+					</li>
+					<li id='C++'><a class='staff-menu-button' ng-click="cpp_projects()">C++ Projects</a>
+						<ul id='emp_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>X</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Y</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Y</a><br></li>	
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Z</a><br></li>			
+						</ul>	
+					</li>
+					<li id='unity'><a class='staff-menu-button' ng-click="unity_projects()">Unity Projects</a>
+						<ul id='oth_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>1</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>2</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>3</a><br></li>			
+						</ul>		
+					</li>
+					 <li id='fm'><a class='staff-menu-button' ng-click="fm_projects()">Filemaker Projects</a>
+						<ul id='fm_submenu'>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>P</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Q</a><br></li>
+							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>R</a><br></li>				
+						</ul>
+					</li>
+					<li id='swift'><a class='staff-menu-button' ng-click="swift_projects()" >Swift Projects</a>
+						<ul id='sw_submenu'>
+						  <li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Swift1</a><br></li>
+						  <li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Swift2</a><br></li>
+						  <li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Swift2</a><br></li>			
+						</ul>		
+					</li>	
+				</ul>			
+			</div>
+			
+
+			<div ng-hide=completed class='android-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Completed Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class="table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Bill on the run</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+			</div>
+			<div id='android' ng-hide=android class='android-contents'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Android Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class="table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Catch the Arrow</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+			</div>
+			<div id='cpp'  ng-hide=cpp class='android-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>C++ Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class=" table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Bill on the run</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+					
+				</div>
+				<div id='unity' ng-hide=unity class='android-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Unity Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class=" table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Super rider</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+			</div>
+			<div id='fm' ng-hide=filemaker class='android-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>FileMaker Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class=" table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Super rider</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+			</div>
+				<div id='swift' ng-hide=swift class='android-contents dir'>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Swift Projects in Company</p>
+				<! table for handling showing projects data >		
+					<table class=" table-border" align='center' >
+				    	<thead>
+				    		  <tr class='task-table-header'>
+			    			    <th width=5%>#</th>
+			    			    <th width=20%>Project Name</th>
+								<th width=10%>Client Name</th>
+			    			    <th width=20%>Start Date</th>
+								<th width=5%>Done(%)</th>
+								<th width=20%>Possible End date </th>
+								<th width=20%>Developer Name</th>				
+	    		  			</tr>
+				    	</thead>
+					    <tbody>
+		
+						{% for data in 'xxxxxxxxxxxxxxxxxxxxx' %}
+					    	<tr class='osm-projects-pointing'>
+								<td >{{ forloop.counter }}</td>
+					    	    <td  style='color:#000000;'><b>Super rider</b></td>
+					    	    <td >Andrew</td>
+					    	    <td >01-01-2016</td>
+								<td >100</td>
+								<td >10-05-2016</td>
+								<td >Phillips</td>
+				    	  </tr>
+						{% endfor %}
+			    	  </tbody>
+	  				</table>									
+			</div>
+			</div>	
+		</div>
+<script>
+	var app = angular.module("projects_app", []);
+	app.controller("projects_controller", function($scope){
+		 
+		$scope.completed = false;
+		$scope.android = true;
+		$scope.cpp = true;
+		$scope.unity = true;
+		$scope.filemaker = true;
+		$scope.swift = true;
+
+		$scope.android_projects = function(){
+		
+			$scope.completed = true;
+			$scope.android = false;
+			$scope.cpp = true;
+			$scope.unity = true;
+			$scope.filemaker = true;
+			$scope.swift = true;
+		};
+		$scope.cpp_projects = function(){
+			
+			$scope.completed = true;
+			$scope.android = true;
+			$scope.cpp = false;
+			$scope.unity = true;
+			$scope.filemaker = true;
+			$scope.swift = true;
+		};
+		$scope.unity_projects = function(){
+			
+			$scope.completed = true;
+			$scope.android = true;
+			$scope.cpp = true;
+			$scope.unity = false;
+			$scope.filemaker = true;
+			$scope.swift = true;
+		};
+		$scope.fm_projects = function(){
+			
+			$scope.completed = true;
+			$scope.android = true;
+			$scope.cpp = true;
+			$scope.unity = true;
+			$scope.filemaker = false;
+			$scope.swift = true;
+		};
+		$scope.swift_projects = function(){
+			
+			$scope.completed = true;
+			$scope.android = true;
+			$scope.cpp = true;
+			$scope.unity = true;
+			$scope.filemaker = true;
+			$scope.swift = false;
+		};
+});
+</script>
+</body>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
