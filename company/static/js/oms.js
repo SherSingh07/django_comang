@@ -114,11 +114,12 @@ function save_attendence(atten_data){
     });
 }
 function attendence_selected(){
+		
 		var emp_att = $('#att-status').val(); 
 		var id = $('#name').text() +"-"+ $('#day').text(); 
 		$('#' + id).text(emp_att);
 		attendence[id] = emp_att;
-
+		$('#att-status').val('-'); 
 		$('#attendence-editor').toggleClass('a-editor-tog');
 		$('#dis-layer').toggleClass('toggle-layer');
 }
@@ -127,7 +128,11 @@ function show_a_editor(id){
 		$('#name').text(id.split('-')[0]);	
 		$('#day').text(id.split('-')[1] );
 }	
-
+function on_staff_load(){
+	    $('#register_dir').click(function(){
+			alert('testing list click');
+		 });
+}
 
  $(document).ready(function(){    
 
@@ -146,6 +151,9 @@ function show_a_editor(id){
 	  $('#directors').hide();
 	  $('#others').hide();	
       $('#attendence').hide();	
+	  $('.footer').css('width', screen.width);
+	  $('.staff-heading').css('width', screen.width);
+	  $('.heading-style').css('width', screen.width);
 	  time(); 
 	  setInterval(time, 1000);
      

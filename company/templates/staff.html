@@ -12,7 +12,11 @@
 
 </head>
 <body>
-	
+	<script>
+		window.onload = function(){
+			 on_staff_load();
+		}			
+	</script>	
 	<div id='container' class='staff'>
 			<div id='staff-heading' class='staff-heading'>
 				<a class='staff-home right-button' href="main">Home</a>	
@@ -24,7 +28,7 @@
 				<ul>
 					<li id='director'><a class='staff-menu-button'> Manage Directors</a><br>
 						<ul id='dir_submenu'>
-							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing');>Registrer director</a><br></li>
+							<li id='register_dir'><a class='staff-menu-button staff-submenu-button' >Registrer director</a><br></li>
 							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Delete director</a><br></li>
 							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>Update detail</a><br></li>	
 							<li><a class='staff-menu-button staff-submenu-button' onclick=alert('testing2');>View director list</a><br></li>			
@@ -49,7 +53,7 @@
 			</div>
 			
 		<div id='directors' class='staff-contents dir'>
-			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Directors in Company</p>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;background:linear-gradient(to right,rgba(140,6,5,0.1),rgba(338,384,271,0.4),rgba(140,6,5,0.1));'>Directors in Company</p>
 				<! table for handling showing director data >		
 			<table class="table-striped table-border" align='center' >
 		    	<thead>
@@ -71,7 +75,7 @@
 		    	    <td  style='color:#000000;'><b>John</b></td>
 		    	    <td >10-10-2016</td>
 		    	    <td >1</td>
-					<td >1</td>
+					<td >Rs. 35,000</td>
 					<td >Development</td>
 		    	  </tr>
 			{% endfor %}
@@ -82,7 +86,7 @@
 					
 			</div>
 		<div id='employees' class='staff-contents emp'>
-	 		<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Employees</p>
+	 		<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;background:linear-gradient(to right,rgba(140,6,5,0.1),rgba(338,384,271,0.4),rgba(140,6,5,0.1));'>Employees</p>
 		
 		 <table class="table-responsive table-border " align='center' >
 		    <thead>
@@ -104,7 +108,7 @@
 		    	    <td ><b> Clare </b></td>
 		    	    <td >10-10-2016</td>
 		    	    <td >1</td>
-					<td >1</td>
+					<td >Rs. 20,000</td>
 					<td >1</td>
 		    	  </tr>
 			{% endfor %}
@@ -115,11 +119,11 @@
 				
 			</div>
 		<div id='others' class='staff-contents oth'>
-			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana; margin-top: 40px;'>Other Employees</p>
+			<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;background:linear-gradient(to right,rgba(140,6,5,0.1), rgba(338,384,271,0.4),rgba(140,6,5,0.1));'>Other Employees</p>
 			 <table class="table-border" align='center' >
 			    <thead>
 				      <tr>
-					       <th width=10%>Sr.No.</th>
+					       <th width=10%>#</th>
 		       	 		   <th width=20%>Name of Employee</th>
 		        		   <th width=20%>Date of Joining</th>
 						   <th width=10%>Experience/years</th>
@@ -136,22 +140,43 @@
 		    	    <td>Clark</td>
 		    	    <td>10-10-2016</td>
 		    	    <td>1</td>
-					<td>1</td>
+					<td>Rs. 15,000</td>
 					<td>1</td>
 		    	  </tr>
 			{% endfor %}
 			{% endwith %}
 		    </tbody>
 	  	</table>
-				
-				
 			</div>	
-		</div>
+		
 
-	<script>
-			
-	</script>
-
+		<div class='dir_form form-back'>
+			<p id='heading' style='text-align:center;font-size:22px;'><b>Director Form</b></p>
+			<div class="form-content form-dacoration">
+				<br>
+				<p style="margin-top:10px;margin-left:10px;font-size:16px;color:blue;">Register Director </p>
+			    <table width='50%'>
+					<tbody>
+					<tr style='border-style:none;'><td width='50%'><label for='name'>Name</label></td><td width='30%'><input type='text' name='name'></input></td></tr>
+					<tr><td width='50%'><label for='join_date'>Date of Joining</label></td><td width='30%'><input type='date' name='jdate'></input></td></tr>
+					<tr><td width='50%'><label for='exp'>Experience/year</label></td><td width='30%'><input type='text name='exp'></input></td></tr>
+					<tr><td width='50%'><label for='sal'>Salary</label></td><td width='30%'><input type='text' name='sal'></input></td></tr>
+					<tr><td width='50%'><label for='department'>Department Name</label></td><td width='30%'>
+					<select style="width : 130px;margin-left:192px;" id="att-status" onchange=''>
+						<option selected="selected" value="-"> Select Attendence </option>
+						<option value="P">Present</option>
+						<option value="A">Absent</option>
+						<option value="H">Half Day</option>
+						<option value="SL">On Leave</option>
+						<option value="O">Other</option>
+					</select>
+					</td></tr>
+					</tbody>				
+				</table>
+      </div>	
+	</div>
+</div>	
+<div class="dis-layer" id="dis-layer"></div>
 </body>
 <html>
 

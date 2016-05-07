@@ -26,7 +26,7 @@
 					<h1 id="heading" align="center">OMS</h1>
 				</div>	
 				<div style='width:1324px;height:46px;font-family: Comic Sans MS;'>
-					<div style='width:1000px;height:40px;float:left;' >	
+					<div style='width:981px;height:40px;float:left;' >	
 					 	<p font-family='Monospace' class='subtitle'>Office Management System....</p>
 					</div >
 					<div style='width:324px;height:40px;float:left;'>
@@ -53,7 +53,7 @@
 		     </div>
 		</div>
 		
- 	<div style='width:1338px;height:800px; margin-top: 50px;'>
+ 	<div style='width:1338px;height:800px;'>
 		     <div id = "sidebar" class="sidebar-menu sidebar-dacoration">
 				<div id="sidebar-menus">
 					<a id = "staff" class="sidebar-menu-button" href = "staff">Staff</a>	
@@ -66,7 +66,7 @@
 				</div>
 			</div>
 			<div id='tasks' class='task-manager'>
-				<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;'>Manage Your today`s Task using Task Manager</p>
+				<p align='center' style='font-size:22px;font-family: Trebuchet MS, Arial, Verdana;background: linear-gradient(to right,rgba(140,6,5,0.1),rgba(338,384,271,0.4),rgba(140,6,5,0.1));'>Manage Your today`s Task using Task Manager</p>
 
 			<! table for handling showing director data >		
 			<table class=' table-border task-table" align='center' >
@@ -74,10 +74,10 @@
 		    		 <tr style='color:000000;'>
 	    			    <th width=5%><b>#</b></th>
 	    			    <th width=20%><b>Project Name</b></th>
-	    			    <th width=5%><b>Start Date</b></th>
+	    			    <th width=10%><b>Start Date</b></th>
 						<th width=10%><b>Developer</b></th>
 						<th width=5%><b>Language</b></th>
-						<th width=50%><b>Todays Task</b></th>
+						<th width=45%><b>Todays Task</b></th>
 						<th width=10%><b>Developer Mail ID</b></th>
 	     			</tr>
 		    	</thead>
@@ -87,7 +87,7 @@
 		    	<tr class='task-table-contents osm-pointing' style='color:red;'>
 					<td >{{ forloop.counter }}</td>
 		    	    <td ><b>SuperRider(3D game)</b></td>
-		    	    <td >10-10-2016</td>
+		    	    <td style='font-size:13px;'>10-10-2016</td>
 		    	    <td >XYZ clark</td>
 					<td >C#</td>
 					<td style='text-align:left;'>Change the graphics of the game. And some other functionalities related to game</td>
@@ -166,7 +166,7 @@
 				<select style="width : 130px;margin-left:192px;margin-top: -40" id="att-status" onchange='attendence_selected();'>
 					<option selected="selected" value="-"> Select Attendence </option>
 					<option value="P">Present</option>
-					<option value="A">Apsent</option>
+					<option value="A">Absent</option>
 					<option value="H">Half Day</option>
 					<option value="SL">On Leave</option>
 					<option value="O">Other</option>
@@ -178,13 +178,14 @@
 			<p id='heading' style='font-size:18px;font-family:Trebuchet MS, Arial, Verdana;margin-left:20px;'><b>Message</b></p>
 			<div id='content' style='width:300px;height:126px;border-top:1px solid black;'>
 				<br>	
-	 			<p id='message' style='margin-left:40px;font-size:16px;'>Attendence save..</p>
+	 			<p id='message' style='margin-left:40px;font-size:16px;'>Attendence saved..</p>
 				<button type="button" id='save-ok' class='popup-btn btn-ok' style='margin-left:120px;' >Ok</button>
 	       	</div>
     	</div>
 
 	<div class="popup-layer" id="popup-layer"></div>
 	<div class="dis-layer" id="dis-layer"></div>
+	<div class='footer'></div>
 </body>
 <html>
 

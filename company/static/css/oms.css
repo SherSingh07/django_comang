@@ -1,6 +1,7 @@
 
 
 body{
+	width:1100px;
   background-image:url("../images/oms.png")
 }
 
@@ -53,7 +54,7 @@ h2{
 
 .heading-style{
 		width: 101.5%;	
-		background-color:#339966;
+		background:linear-gradient(to right, rgba(126, 68, 68, 0.54),rgba(218, 180, 180, 0.6),rgba(87, 49, 18, 0.5));
 }
 
 .title{
@@ -81,7 +82,7 @@ h2{
 		border: 1px solid #5bd9af;
 		text-align:center;		
 		color:#900;
-		background-color:#37d037;
+		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
 		font-size:18px;
 		font-family: Times New Roman;
 		margin-left:1px;
@@ -94,13 +95,13 @@ h2{
     	display:inline-block;
     	vertical-align: middle;
 		width:120;
-		height:50;
+		height:40;
     	color:#94123c;
-		background-color:#37d037;
+		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
 		font-size:18px;
 		font-family: Times New Roman;
 		text-align:center;
-		line-height:30px;
+		line-height:21px;
 		float:left;
 		padding:10px;
 		margin-right:10px;
@@ -300,13 +301,13 @@ a:visited{
 .user{
 	    color: #b2c4b4;
 	    float: left;
-	    margin: 0px 1px 0 0px;	
+	    margin: 0px 1px 0 28px;	
 }
 
 .time{
 	    color: #b2c4b4;
 	    float: left;
-	    margin: 1px 1px 0 61px;		
+	    margin: 1px 1px 0 80px;		
 }
 .popup-layer{
         position: fixed;
@@ -383,7 +384,7 @@ a:visited{
 		margin-right:50px;	
 }
 .atten-panel-btn{
-		background:green;
+		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
 		float:left;
 		margin-top:20px;
 		width:162px;
@@ -398,20 +399,17 @@ a:visited{
 .staff-heading{
 		width:1330;
 		height:100px;
-		background-color:#070;
-		border-width:2px;
+		background: linear-gradient(rgba(162,1,1,0.5),rgba(135,154,152,0.5),rgba(1,1,1,0.2));
 		font-size:30px;
-		border-color:black;
-		border-style: solid;
 }
 
 .staff-sidebar{
-  		   background-color: #32ab74;
-    float: left;
-    height: 500px;
-    margin-left: 1px;
-    margin-top: 85px;
-    width: 240px;
+  		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
+    	float: left;
+    	height: 500px;
+    	margin-left: 1px;
+    	margin-top: 85px;
+    	width: 240px;
 }
 .staff-heading:hover{
 		color:#ffffff;
@@ -419,14 +417,14 @@ a:visited{
 
 .right-button{
 		float:right;
-		margin-right:40px;
+		margin-right:120px;
 }
 .staff-home{
 	   	border-radius: 36px;
     	border: 2px solid #458490;
     	display: inline-block;
 		color:#900;
-		background-color:#37d037;
+		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
 		font-size:18px;
 		font-family: Times New Roman;
     	height: 66px;
@@ -445,7 +443,7 @@ a:visited{
 		width:220;
 		height:30;
     	color:#94123c;
-		background-color:#37d037;
+		background: linear-gradient(rgba(207, 143, 143, 0.2),rgba(252, 252, 252, 0.6),rgba(177, 120, 73, 0.2));
 		font-size:18px;
 		font-family: Times New Roman;
 		text-align:center;
@@ -463,11 +461,11 @@ a:visited{
 		color:#000000;
 		border-color:#cc6600;
 }
-.staff-contents{
-    	height: 1100px;
-    	margin-left: 237px;
-    	width: 1080px;
-		
+.staff-contents {
+    height: 500px;
+    margin: 84px 0 0 237px;
+    overflow: auto;
+    width: 1034px;
 }
 .android-contents{
     	height: 500px;
@@ -507,8 +505,6 @@ a:visited{
 		
 }
 .emp{
-}
-.oth{
 		
 }
 
@@ -520,9 +516,9 @@ table {
 		width: 99%;
 		max-width: 99%;		
 		border: 1px solid #64c0ff;
-		margin-top: 15px;
+		margin-top: 1px;
 		margin-bottom: 25px;
-		background:rgba(179,155,0,0.23);
+		background:linear-gradient(rgba(98,243,0,0.4),rgba(142,65,257,0.4));
 }
 td {
 		border-bottom: 1px solid #CDC1A7;
@@ -562,12 +558,12 @@ th {
 		background-color:#0033cc;
 }
 
-.task-manager{
-		float: right;
-		height: 788px;
-		margin-right: 10px;
-		width: 1068px;
-	
+.task-manager {
+    float: right;
+    height: 538px;
+    margin: 91px 49px 0 0;
+    overflow: auto;
+    width: 1019px;
 }
 .task-table-contents{
 		font-size:14px;
@@ -579,18 +575,19 @@ th {
 .task-table-header{
 		border-color:#575775;
 }
-.attendence-manager{
-		float: left;
-		height: 700px;
-		margin-right: 10px;
-		width: 1038px;
-		overflow:scroll;
-		overflow-x:scroll;
+.attendence-manager {
+    float: left;
+    height: 500px;
+    margin: 88px 10px 0 0;
+    overflow: scroll;
+    width: 1038px;
 }
 
 .atte-head{
 		font-size:22px;
 		font-family: Trebuchet MS, Arial, Verdana;		
+		background: linear-gradient(to right,rgba(140,6,5,0.1),rgba(338,384,271,0.4),rgba(140,6,5,0.1));
+		height: 39;
 }
 .about-back{
 		height:800px;
@@ -626,4 +623,28 @@ th {
  	   width: 730px;
 	   color:red;
 	   opacity:1;
+}
+.footer{
+		height:89px;
+		border:1px solid black;
+		background-color:#339966;
+}
+.dir_form{
+		z-index: 10;
+		width: 700px;
+		height: 600px;
+		margin: 30 0 0 300;
+}
+.form-content {
+		width: 500px;
+		height: 200px
+		margin: 10 0 0 123;
+}
+
+.form-dacoration{
+		background:linear-gradient(rgba(142,65,257,0.4),rgba(98,243,0,0.4),rgba(142,65,257,0.4));
+		border-bottom: 1px solid #CDC1A7;
+}
+.form-back{
+		background:rgba(98,243,0,0.4);
 }
